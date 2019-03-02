@@ -73,6 +73,118 @@
         ]
       },
       {
+        "id": "zw003_press_1",
+        "title": {
+          "en": "Left top short pressed",
+          "nl": "Linksboven kort ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW003"
+          }
+        ]
+      },
+      {
+        "id": "zw003_hold_1",
+        "title": {
+          "en": "Left top long pressed",
+          "nl": "Linksboven lang ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW003"
+          }
+        ]
+      },
+      {
+        "id": "zw003_press_2",
+        "title": {
+          "en": "Right top short pressed",
+          "nl": "Rechtsboven kort ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW003"
+          }
+        ]
+      },
+      {
+        "id": "zw003_hold_2",
+        "title": {
+          "en": "Right top long pressed",
+          "nl": "Rechtsboven lang ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW003"
+          }
+        ]
+      },
+      {
+        "id": "zw003_press_3",
+        "title": {
+          "en": "Left bottom short pressed",
+          "nl": "Linksonder kort ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW003"
+          }
+        ]
+      },
+      {
+        "id": "zw003_hold_3",
+        "title": {
+          "en": "Left bottom long pressed",
+          "nl": "Linksonder lang ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW003"
+          }
+        ]
+      },
+      {
+        "id": "zw003_press_4",
+        "title": {
+          "en": "Right bottom short pressed",
+          "nl": "Rechtsonder kort ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW003"
+          }
+        ]
+      },
+      {
+        "id": "zw003_hold_4",
+        "title": {
+          "en": "Right bottom long pressed",
+          "nl": "Rechtsonder lang ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW003"
+          }
+        ]
+      },
+      {
         "id": "zw088_press_1",
         "title": {
           "en": "Left top short pressed",
@@ -1176,6 +1288,80 @@
         "large": "/drivers/DSD37/assets/images/large.png",
         "small": "/drivers/DSD37/assets/images/small.png"
       }
+    },
+    {
+      "id": "ZW003",
+      "name": {
+        "en": "Minimote"
+      },
+      "class": "button",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/ZW003/assets/images/large.png",
+        "small": "/drivers/ZW003/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          1,
+          513
+        ],
+        "productId": [
+          3
+        ],
+        "zwaveAllianceProductId": 142,
+        "learnmode": {
+          "image": "/drivers/ZW003/assets/learnmode.svg",
+          "instruction": {
+            "en": "Short press the \"Learn\" button on the Minimote",
+            "nl": "Druk kort op de \"Learn\" knop op de Minimote"
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Return the device into Setup mode by pressing the \"Associate\" and \"Learn\" buttons simultaneously for 10 seconds on the Minimote",
+            "nl": "Switch het apparaat naar de Setup modus door de \"Associate\" en \"Learn\" knoppen tegelijk in te drukken voor 10 seconden op de Minimote"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the Minimote is in Scene Mode, pressing the control button, which will send the corresponding Scene id to the associated nodes. "
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 250,
+            "size": 1,
+            "value": 1
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "poll_interval",
+          "type": "number",
+          "label": {
+            "en": "Poll Interval",
+            "nl": "Poll Interval"
+          },
+          "hint": {
+            "en": "This parameter ({{zwaveParameterIndex}}) determines the amount of seconds between asking the device for a status update.",
+            "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het aantal seconden tussen het opvragen van een status update aan het apparaat."
+          },
+          "attr": {
+            "min": 60,
+            "max": 3600
+          },
+          "value": 240
+        }
+      ]
     },
     {
       "id": "ZW062",
